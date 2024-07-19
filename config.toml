@@ -21,23 +21,19 @@ theme = "LoveIt"
     pre = ""
     post = ""
     typeit = false
-  
-  [params.search]
-    enable = true
-    type = "algoia" 
 
 [menu]
   [[menu.main]]
     identifier = "book"
     name = "Books"
     url = "/book/"
-    weight = 2
+    weight = 1
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 3
+    weight = 2
 
   [outputs]
     home = ["HTML", "RSS", "Algolia"]
@@ -48,7 +44,23 @@ theme = "LoveIt"
       mediaType = "application/json"
       notAlternative = true
   
-  [params.algolia]
-    appId = "L1WEB26MB8"
-    indexName = "my_index"
-    searchOnlyKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
+[params.search]
+  enable = true
+  # 搜索引擎的类型 ["lunr", "algolia"]
+  type = "algolia"
+  # 文章内容最长索引长度
+  contentLength = 4000
+  # 搜索框的占位提示语
+  placeholder = ""
+  # LoveIt 新增 | 0.2.1 最大结果数目
+  maxResultLength = 10
+  # LoveIt 新增 | 0.2.3 结果内容片段长度
+  snippetLength = 50
+  # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+  highlightTag = "em"
+  # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+  absoluteURL = false
+  [params.search.algolia]
+    index = "my_index"
+    appID = "L1WEB26MB8"
+    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
