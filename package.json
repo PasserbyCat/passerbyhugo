@@ -8,9 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "atomic-algolia": "^0.3.19",
     "dotenv": "^16.4.5"
-  }
+  },
+  "devDependencies": {
+    "atomic-algolia": "^0.3.19"
+  },
+  "description": ""
 }
