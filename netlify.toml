@@ -1,7 +1,10 @@
 [build]
-  command = "hugo && npx hugo-algolia"
   publish = "public"
+  command = "hugo --gc --minify && npx hugo-algolia"
 
 [context.production.environment]
+  ALGOLIA_APP_ID = "L1WEB26MB8"
+  ALGOLIA_ADMIN_KEY = "42c1bb9702e5700b72527c8e49cca680"
+  ALGOLIA_INDEX_NAME = "my_index"
   HUGO_VERSION = "0.127.0"
   HUGO_ENV = "production"

@@ -1,38 +1,43 @@
-<div id="searchbox"></div>
-<div id="hits"></div>
+{{ define "main" }}
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="搜索...">
+        <div id="search-results"></div>
+    </div>
 
-<script>
-  const searchClient = algoliasearch('{{ .Site.Params.algolia_app_id }}', '{{ .Site.Params.algolia_search_api_key }}');
-  const index = searchClient.initIndex('{{ .Site.Params.algolia_index_name }}');
-
-  autocomplete({
-    container: '#searchbox',
-    placeholder: '搜索...',
-    getSources({ query }) {
-      return [
-        {
-          sourceId: 'pages',
-          getItems() {
-            return index.search(query).then(({ hits }) => {
-              return hits;
-            });
-          },
-          templates: {
-            item({ item, components }) {
-              return `<a href="${item.url}">${components.Highlight({ hit: item, attribute: 'title' })}</a>`;
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.5/dist/algoliasearch-lite.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.33.0/dist/instantsearch.production.min.js"></script>
+    <script>
+        const searchClient = algoliasearch('{{ getenv "ALGOLIA_APP_ID" }}', '{{ getenv "ALGOLIA_ADMIN_KEY" }}');
+        const search = instantsearch({
+            indexName: '{{ getenv "ALGOLIA_INDEX_NAME" }}',
+            searchClient,
+            searchFunction(helper) {
+                const container = document.querySelector('#search-results');
+                container.innerHTML = '';
+                if (helper.state.query === '') {
+                    return;
+                }
+                helper.search();
             },
-          },
-        },
-      ];
-    },
-  });
+        });
 
-  index.search('').then(({ hits }) => {
-    const container = document.querySelector('#hits');
-    hits.forEach(hit => {
-      const item = document.createElement('div');
-      item.innerHTML = `<a href="${hit.url}">${hit.title}</a>`;
-      container.appendChild(item);
-    });
-  });
-</script>
+        search.addWidgets([
+            instantsearch.widgets.searchBox({
+                container: '#search-input',
+                placeholder: '搜索...',
+            }),
+            instantsearch.widgets.hits({
+                container: '#search-results',
+                templates: {
+                    item(hit) {
+                        return `<div>
+                            <a href="${hit.url}">${hit.title}</a>
+                        </div>`;
+                    },
+                },
+            }),
+        ]);
+
+        search.start();
+    </script>
+{{ end }}
