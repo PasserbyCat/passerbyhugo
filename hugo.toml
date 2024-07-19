@@ -1,0 +1,54 @@
+baseURL = "https://passerbycat.netlify.app/"
+languageCode = "zh-tw"
+title = "路人貓的小屋"
+theme = "LoveIt"
+
+[params]
+  defaultContentLanguage = "zh-tw"
+
+  [params.home]
+    rss = 10
+
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = ""
+      subtitle = "歡迎來到路人貓的小屋"
+
+  [params.header.title]
+    logo = ""
+    name = "路人貓的小屋"
+    pre = ""
+    post = ""
+    typeit = false
+  
+  [params.search]
+    enable = true
+    type = "algoia" 
+
+[menu]
+  [[menu.main]]
+    identifier = "book"
+    name = "Books"
+    url = "/book/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+  [outputs]
+    home = ["HTML", "RSS", "Algolia"]
+
+    [outputFormats.Algolia]
+      baseName = "algolia"
+      isPlainText = true
+      mediaType = "application/json"
+      notAlternative = true
+  
+  [params.algolia]
+    appId = "L1WEB26MB8"
+    indexName = "my_index"
+    searchOnlyKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
