@@ -1,5 +1,5 @@
 [build]
-  command = "hugo && npx hugo-algolia"
+  command = "hugo"
   publish = "public"
 
 [context.production.environment]
