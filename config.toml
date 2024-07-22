@@ -24,16 +24,22 @@ theme = "LoveIt"
 
 [menu]
   [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+  
+  [[menu.main]]
     identifier = "book"
     name = "Books"
     url = "/book/"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 2
+    weight = 3
 
   [outputs]
     home = ["HTML", "RSS", "Algolia"]

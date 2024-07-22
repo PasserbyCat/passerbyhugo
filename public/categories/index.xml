@@ -3,7 +3,15 @@
         <title>Categories - Category - 路人貓的小屋</title>
         <link>http://localhost:1313/categories/</link>
         <description>Categories - Category - 路人貓的小屋</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 03 Jul 2024 14:40:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 22 Jul 2024 11:27:11 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Blog</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <pubDate>Mon, 22 Jul 2024 11:27:11 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Book</title>
     <link>http://localhost:1313/categories/book/</link>
     <pubDate>Wed, 03 Jul 2024 14:40:14 &#43;0800</pubDate>
