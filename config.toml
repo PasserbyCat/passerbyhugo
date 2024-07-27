@@ -1,7 +1,18 @@
 baseURL = "https://passerbycat.netlify.app/"
+# 網站語言
 languageCode = "zh-tw"
+# 語言名稱
+languageName = "繁體中文"
+# 網站標題
 title = "路人貓的小屋"
+# 更改hugo當前預設使用的主題
 theme = "LoveIt"
+
+# 作者配置
+[author]
+  name = "路人貓"
+  email = ""
+  link = ""
 
 [params]
   defaultContentLanguage = "zh-tw"
@@ -22,12 +33,19 @@ theme = "LoveIt"
     post = ""
     typeit = false
 
+# 菜單配置
 [menu]
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/blog/"
     weight = 1
+    # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    pre = ""
+    # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    post = ""
+    # 當鼠標停在此處時，顯示的標題
+    title = ""
   
   [[menu.main]]
     identifier = "book"
@@ -41,14 +59,14 @@ theme = "LoveIt"
     url = "/tags/"
     weight = 3
 
-  [outputs]
-    home = ["HTML", "RSS", "Algolia"]
+[outputs]
+  home = ["HTML", "RSS", "Algolia"]
 
-    [outputFormats.Algolia]
-      baseName = "algolia"
-      isPlainText = true
-      mediaType = "application/json"
-      notAlternative = true
+  [outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = true
+    mediaType = "application/json"
+    notAlternative = true
   
 [params.search]
   enable = true
