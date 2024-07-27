@@ -1,37 +1,40 @@
 baseURL = "https://passerbycat.netlify.app/"
+
+# 更改hugo當前預設使用的主題
+theme = "LoveIt"
+
+# 網站標題
+title = "路人貓的小屋"
+
 # 網站語言
 languageCode = "zh-tw"
 # 語言名稱
 languageName = "繁體中文"
-# 網站標題
-title = "路人貓的小屋"
-# 更改hugo當前預設使用的主題
-theme = "LoveIt"
+# 是否包含中日韓文字
+hasCJKLanguage = true
+
+# 默认每页列表显示的文章数目
+paginate = 12
+# 谷歌分析代号 [UA-XXXXXXXX-X]
+googleAnalytics = ""
+# 版权描述，仅仅用于 SEO
+copyright = ""
+
+# 是否使用 robots.txt
+enableRobotsTXT = true
+# 是否使用 git 信息
+enableGitInfo = true
+# 是否使用 emoji 代码
+enableEmoji = true
+
+# 忽略一些构建错误
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # 作者配置
 [author]
   name = "路人貓"
   email = ""
   link = ""
-
-[params]
-  defaultContentLanguage = "zh-tw"
-
-  [params.home]
-    rss = 10
-
-    [params.home.profile]
-      enable = true
-      gravatarEmail = ""
-      avatarURL = ""
-      subtitle = "歡迎來到路人貓的小屋"
-
-  [params.header.title]
-    logo = ""
-    name = "路人貓的小屋"
-    pre = ""
-    post = ""
-    typeit = false
 
 # 菜單配置
 [menu]
@@ -58,6 +61,25 @@ theme = "LoveIt"
     name = "Tags"
     url = "/tags/"
     weight = 3
+
+[params]
+  defaultContentLanguage = "zh-tw"
+
+  [params.home]
+    rss = 10
+
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = ""
+      subtitle = "歡迎來到路人貓的小屋"
+
+  [params.header.title]
+    logo = ""
+    name = "路人貓的小屋"
+    pre = ""
+    post = ""
+    typeit = false
 
 [outputs]
   home = ["HTML", "RSS", "Algolia"]
