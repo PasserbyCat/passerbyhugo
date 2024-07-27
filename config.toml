@@ -1,54 +1,36 @@
 baseURL = "https://passerbycat.netlify.app/"
+theme = "LoveIt" # 更改hugo當前預設使用的主題
+title = "路人貓的小屋" # 網站標題
 
-# 更改hugo當前預設使用的主題
-theme = "LoveIt"
+languageCode = "zh-tw" # 網站語言
+languageName = "繁體中文" # 語言名稱
+hasCJKLanguage = true # 是否包含中日韓文字
 
-# 網站標題
-title = "路人貓的小屋"
+paginate = 12 # 每頁預設顯示的文章數量
+googleAnalytics = "" # google分析代號 [UA-XXXXXXXX-X]
+copyright = "" # 版權描述，僅僅用於SEO
 
-# 網站語言
-languageCode = "zh-tw"
-# 語言名稱
-languageName = "繁體中文"
-# 是否包含中日韓文字
-hasCJKLanguage = true
+enableRobotsTXT = true # 是否使用robots.txt
+enableGitInfo = true # 是否使用git訊息
+enableEmoji = true # 是否使用emoji
 
-# 默认每页列表显示的文章数目
-paginate = 12
-# 谷歌分析代号 [UA-XXXXXXXX-X]
-googleAnalytics = ""
-# 版权描述，仅仅用于 SEO
-copyright = ""
-
-# 是否使用 robots.txt
-enableRobotsTXT = true
-# 是否使用 git 信息
-enableGitInfo = true
-# 是否使用 emoji 代码
-enableEmoji = true
-
-# 忽略一些构建错误
+# 忽略一些building error
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
-# 作者配置
-[author]
+[author] # 作者配置
   name = "路人貓"
   email = ""
   link = ""
 
-# 菜單配置
-[menu]
+[menu] # 菜單配置
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/blog/"
     weight = 1
-    # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
-    pre = ""
-    # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
-    post = ""
-    # 當鼠標停在此處時，顯示的標題
-    title = ""
+    pre = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    post = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    title = "" # 當鼠標停在此處時，顯示的標題
   
   [[menu.main]]
     identifier = "book"
@@ -63,7 +45,46 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     weight = 3
 
 [params]
-  defaultTheme = "auto" # 預設的網站主題樣式["auto", "light", dark"]
+  defaultTheme = "auto" # 網站預設的背景顏色["auto", "light", "dark"]
+  gitRepo = "" # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
+  # ["sha256", "sha384", "sha512", "md5"]
+  fingerprint = ""
+  # LoveIt 新增 | 0.2.0 日期格式
+  dateFormat = "2006-01-02"
+  # 网站标题, 用于 Open Graph 和 Twitter Cards
+  title = "我的网站"
+  # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
+  description = "这是我的全新 Hugo 网站"
+  images = ["/logo.png"] # 网站图片, 用于 Open Graph 和 Twitter Cards
+
+  [params.header.title]
+    logo = ""
+    name = "路人貓的小屋"
+    pre = ""
+    post = ""
+    typeit = false
+
+  [params.search]
+   enable = true
+    # 搜索引擎的类型 ["lunr", "algolia"]
+    type = "algolia"
+    # 文章内容最长索引长度
+    contentLength = 4000
+    # 搜索框的占位提示语
+    placeholder = ""
+    # LoveIt 新增 | 0.2.1 最大结果数目
+    maxResultLength = 10
+    # LoveIt 新增 | 0.2.3 结果内容片段长度
+    snippetLength = 50
+    # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+    highlightTag = "em"
+    # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+    absoluteURL = false
+    [params.search.algolia]
+      index = "my_index"
+      appID = "L1WEB26MB8"
+      searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
 
   [params.home]
     rss = 10
@@ -74,13 +95,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       avatarURL = ""
       subtitle = "歡迎來到路人貓的小屋"
 
-  [params.header.title]
-    logo = ""
-    name = "路人貓的小屋"
-    pre = ""
-    post = ""
-    typeit = false
-
 [outputs]
   home = ["HTML", "RSS", "Algolia"]
 
@@ -89,24 +103,3 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     isPlainText = true
     mediaType = "application/json"
     notAlternative = true
-  
-[params.search]
-  enable = true
-  # 搜索引擎的类型 ["lunr", "algolia"]
-  type = "algolia"
-  # 文章内容最长索引长度
-  contentLength = 4000
-  # 搜索框的占位提示语
-  placeholder = ""
-  # LoveIt 新增 | 0.2.1 最大结果数目
-  maxResultLength = 10
-  # LoveIt 新增 | 0.2.3 结果内容片段长度
-  snippetLength = 50
-  # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
-  highlightTag = "em"
-  # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
-  absoluteURL = false
-  [params.search.algolia]
-    index = "my_index"
-    appID = "L1WEB26MB8"
-    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
