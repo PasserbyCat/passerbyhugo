@@ -63,7 +63,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     weight = 3
 
 [params]
-  defaultContentLanguage = "zh-tw"
+  defaultTheme = "auto" # 預設的網站主題樣式["auto", "light", dark"]
 
   [params.home]
     rss = 10
