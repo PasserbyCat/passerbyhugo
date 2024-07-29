@@ -58,8 +58,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   description = "这是我的全新 Hugo 网站"
   images = ["/logo.png"] # 网站图片, 用于 Open Graph 和 Twitter Cards
 
-  customCSS = ["css/custom.css"] # chatGPT頭像建議
-
   [params.header]
     # 桌面端导航栏模式 ["fixed", "normal", "auto"]
     desktopMode = "fixed"
