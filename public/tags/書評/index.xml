@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>書評 - Tag - 路人貓的小屋</title>
+        <title>書評 - 標籤 - 路人貓的小屋</title>
         <link>http://localhost:1313/tags/%E6%9B%B8%E8%A9%95/</link>
-        <description>書評 - Tag - 路人貓的小屋</description>
+        <description>書評 - 標籤 - 路人貓的小屋</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 22 Jul 2024 13:38:33 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%9B%B8%E8%A9%95/" rel="self" type="application/rss+xml" /><item>
     <title>最後14堂星期二的課_米奇•艾爾邦</title>
     <link>http://localhost:1313/book/%E6%9C%80%E5%BE%8C14%E5%A0%82%E6%98%9F%E6%9C%9F%E4%BA%8C%E7%9A%84%E8%AA%B2/</link>

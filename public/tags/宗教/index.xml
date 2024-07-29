@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>宗教 - Tag - 路人貓的小屋</title>
+        <title>宗教 - 標籤 - 路人貓的小屋</title>
         <link>http://localhost:1313/tags/%E5%AE%97%E6%95%99/</link>
-        <description>宗教 - Tag - 路人貓的小屋</description>
+        <description>宗教 - 標籤 - 路人貓的小屋</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 22 Jul 2024 11:45:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AE%97%E6%95%99/" rel="self" type="application/rss+xml" /><item>
     <title>信仰的關卡_加低斯</title>
     <link>http://localhost:1313/blog/%E4%BF%A1%E4%BB%B0%E7%9A%84%E9%97%9C%E5%8D%A1/</link>

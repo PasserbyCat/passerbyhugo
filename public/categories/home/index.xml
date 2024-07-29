@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Home - Category - 路人貓的小屋</title>
+        <title>Home - 分類 - 路人貓的小屋</title>
         <link>http://localhost:1313/categories/home/</link>
-        <description>Home - Category - 路人貓的小屋</description>
+        <description>Home - 分類 - 路人貓的小屋</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 03 Jul 2024 14:40:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/home/" rel="self" type="application/rss+xml" /><item>
     <title>blog</title>
     <link>http://localhost:1313/blog/</link>
