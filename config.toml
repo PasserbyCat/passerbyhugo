@@ -670,7 +670,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 pre = ""
                 post = ""
                 name = "書評"
-                url = "/posts/"
+                url = "/book/"
                 title = ""
             [[languages.zh-tw.menu.main]]
                 weight = 2
@@ -724,10 +724,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 absoluteURL = false
 
                 [languages.zh-tw.params.search.algolia]
-                    index = "index.zh-cn"
-                    appID = "PASDMWALPK"
-                    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
-
+                    index = "my_index"
+                    appID = "L1WEB26MB8"
+                    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
+    
             [languages.zh-tw.params.home]
                 rss = 10
 
