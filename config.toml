@@ -1,144 +1,136 @@
-baseURL = "https://example.com"
+baseURL = "https://passerbycat.netlify.app/"
+theme = "LoveIt" # 更改hugo當前預設使用的主題
+title = "路人貓的小屋" # 網站標題
 
-theme = "LoveIt" # 主题
-themesDir = "../.." # 主题目录
+languageCode = "zh-tw" # 網站語言
+languageName = "繁體中文" # 語言名稱
+hasCJKLanguage = true # 是否包含中日韓文字
 
-title = "LoveIt" # 网站标题
+defaultContentLanguage = "zh-tw"
 
-defaultContentLanguage = "en" # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
-languageCode = "en" # 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
-languageName = "English" # 语言名称 ["English", "简体中文", "Français", "Polski", ...]
-hasCJKLanguage = false # 是否包括中日韩文字
+paginate = 12 # 每頁預設顯示的文章數量
+googleAnalytics = "" # google分析代號 [UA-XXXXXXXX-X]
+copyright = "" # 版權描述，僅僅用於SEO
 
-paginate = 12 # 默认每页列表显示的文章数目
-googleAnalytics = "" # 谷歌分析代号 [UA-XXXXXXXX-X]
-copyright = "" # 版权描述，仅仅用于 SEO
+enableRobotsTXT = true # 是否使用robots.txt
+enableGitInfo = true # 是否使用git訊息
+enableEmoji = true # 是否使用emoji
 
-enableRobotsTXT = true # 是否使用 robots.txt
-enableGitInfo = true # 是否使用 git 信息
-enableEmoji = true # 是否使用 emoji 代码
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] # 忽略一些building error
 
-ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] # 忽略一些构建错误
-
-[author]
-  name = "xxxx" # 作者配置
+[author] # 作者配置
+  name = "路人貓"
   email = ""
   link = ""
 
-[menu]
+[menu] # 菜單配置
   [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
     weight = 1
-    identifier = "posts"
-    pre = "" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    post = "" # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    name = "Posts"
-    url = "/posts/"
-    title = "" # 当您将鼠标悬停在此菜单链接上时, 将显示标题
+    pre = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    post = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
+    title = "" # 當鼠標停在此處時，顯示的標題
+  
+  [[menu.main]]
+    identifier = "book"
+    name = "Books"
+    url = "/book/"
+    weight = 2
 
   [[menu.main]]
-    weight = 2
     identifier = "tags"
-    pre = ""
-    post = ""
     name = "Tags"
     url = "/tags/"
-    title = ""
-
-  [[menu.main]]
     weight = 3
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
 
 [params]
-  defaultTheme = "auto" # 网站默认主题 ["auto", "light", "dark"]
-  gitRepo = "https://github.com/dillonzq/LoveIt" # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  fingerprint = "" # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ["sha256", "sha384", "sha512", "md5"]
-  dateFormat = "2006-01-02" # 日期格式
-  title = "LoveIt" # 网站标题, 用于 Open Graph 和 Twitter Cards
-  description = "Hugo theme - LoveIt" # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
+  defaultTheme = "auto" # 網站預設的背景顏色["auto", "light", "dark"]
+  gitRepo = "" # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  fingerprint = "" # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI | ["sha256", "sha384", "sha512", "md5"]
+  dateFormat = "2006-01-02" # LoveIt 新增 | 0.2.0 日期格式
+  title = "我的网站" # 网站标题, 用于 Open Graph 和 Twitter Cards
+  description = "这是我的全新 Hugo 网站" # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
   images = ["/logo.png"] # 网站图片, 用于 Open Graph 和 Twitter Cards
 
   [params.header]
     desktopMode = "fixed" # 桌面端导航栏模式 ["fixed", "normal", "auto"]
     mobileMode = "auto" # 移动端导航栏模式 ["fixed", "normal", "auto"]
-    
+
     [params.header.title]
       logo = "" # LOGO 的 URL
-      name = "LoveIt" # 标题名称
-      pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      name = "路人貓的小屋" # 标题名称
+      pre = "" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       post = "" # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-      typeit = false # 是否为标题显示打字机动画
+      typeit = false # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
 
   [params.footer]
-    enable = true
-    custom = "" # 自定义内容 (支持 HTML 格式)
-    hugo = true # 是否显示 Hugo 和主题信息
-    copyright = true # 是否显示版权信息
-    author = true # 是否显示作者
+    enable = true # 页面底部信息配置
+    custom = '' # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
+    hugo = true # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
+    copyright = true # LoveIt 新增 | 0.2.0 是否显示版权信息
+    author = true # LoveIt 新增 | 0.2.0 是否显示作者
     since = 2019 # 网站创立年份
     icp = "" # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>' # 许可协议信息 (支持 HTML 格式)
 
   [params.section]
-    paginate = 20 # section 页面每页显示文章数量
+    paginate = 20 # LoveIt 新增 | 0.2.0 Section (所有文章) 页面配置
     dateFormat = "01-02" # 日期格式 (月和日)
     rss = 10 # RSS 文章数目
 
   [params.list]
-    paginate = 20 # list 页面每页显示文章数量
+    paginate = 20 # LoveIt 新增 | 0.2.0 List (目录或标签) 页面配置
     dateFormat = "01-02" # 日期格式 (月和日)
     rss = 10 # RSS 文章数目
-
+  
   [params.app]
-    title = "LoveIt" # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+    title = "我的网站" # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
     noFavicon = false # 是否隐藏网站图标资源链接
     svgFavicon = "" # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
     themeColor = "#ffffff" # Android 浏览器主题色
     iconColor = "#5bbad5" # Safari 图标颜色
-    tileColor = "#da532c" # Windows v8-11 磁贴颜色
-
+    tileColor = "#da532c" # Windows v8-10磁贴颜色
+  
   [params.search]
     enable = true
     type = "algolia" # 搜索引擎的类型 ["lunr", "algolia"]
     contentLength = 4000 # 文章内容最长索引长度
     placeholder = "" # 搜索框的占位提示语
-    maxResultLength = 10 # 最大结果数目
-    snippetLength = 30 # 结果内容片段长度
-    highlightTag = "em" # 搜索结果中高亮部分的 HTML 标签
-    absoluteURL = false # 是否在搜索索引中使用基于 baseURL 的绝对路径
+    maxResultLength = 10 # LoveIt 新增 | 0.2.1 最大结果数目
+    snippetLength = 50 # LoveIt 新增 | 0.2.3 结果内容片段长度
+    highlightTag = "em" # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+    absoluteURL = false # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
     
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "my_index"
+      appID = "L1WEB26MB8"
+      searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
 
   [params.home]
-    rss = 10 # RSS 文章数目
+    rss = 10 # LoveIt 新增 | 0.2.0 RSS 文章数目
     
     [params.home.profile]
       enable = true
       gravatarEmail = "" # Gravatar 邮箱，用于优先在主页显示的头像
       avatarURL = "/images/avatar.png" # 主页显示头像的 URL
-      title = "" # 主页显示的网站标题 (支持 HTML 格式)
-      subtitle = "A Clean, Elegant but Advanced Hugo Theme" # 主页显示的网站副标题 (允许 HTML 格式)
+      title = "" # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
+      subtitle = "歡迎來到路人貓的小屋" # 主页显示的网站副标题 (允许 HTML 格式)
       typeit = true # 是否为副标题显示打字机动画
       social = true # 是否显示社交账号
-      disclaimer = "" # 免责声明 (支持 HTML 格式)
+      disclaimer = "" # LoveIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)
     
     [params.home.posts]
       enable = true
       paginate = 6 # 主页每页显示文章数量
 
   [params.social]
-    GitHub = ""
-    Linkedin = ""
-    Twitter = ""
-    Instagram = ""
-    Facebook = ""
+    GitHub = "passerbycat"
+    Linkedin = "xxxx"
+    Twitter = "xxxx"
+    Instagram = "xxxx"
+    Facebook = "xxxx"
     Telegram = ""
     Medium = ""
     Gitlab = ""
@@ -202,116 +194,117 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     ORCID = ""
     Pleroma = ""
     Kaggle = ""
-    MediaWiki = ""
+    MediaWiki= ""
     Plume = ""
     HackTheBox = ""
-    RootMe = ""
-    Email = ""
-    RSS = ""
+    RootMe= ""
+    Phone = ""
+    Email = "mingshin123456789@gmail.com"
+    RSS = true # LoveIt 新增 | 0.2.0
 
   [params.page]
-    hiddenFromHomePage = false # 是否在主页隐藏一篇文章
-    hiddenFromSearch = false # 是否在搜索结果中隐藏一篇文章
-    twemoji = false # 是否使用 twemoji
+    hiddenFromHomePage = false # LoveIt 新增 | 0.2.0 是否在主页隐藏一篇文章
+    hiddenFromSearch = false # LoveIt 新增 | 0.2.0 是否在搜索结果中隐藏一篇文章
+    twemoji = false # LoveIt 新增 | 0.2.0 是否使用 twemoji
     lightgallery = false # 是否使用 lightgallery
-    ruby = true # 是否使用 ruby 扩展语法
-    fraction = true # 是否使用 fraction 扩展语法
-    fontawesome = true # 是否使用 fontawesome 扩展语法
-    linkToMarkdown = true # 是否显示原始 Markdown 文档内容的链接
-    rssFullText = false # 是否在 RSS 中显示全文内容
+    ruby = true # LoveIt 新增 | 0.2.0 是否使用 ruby 扩展语法
+    fraction = true # LoveIt 新增 | 0.2.0 是否使用 fraction 扩展语法
+    fontawesome = true # LoveIt 新增 | 0.2.0 是否使用 fontawesome 扩展语法
+    linkToMarkdown = true # 是否在文章页面显示原始 Markdown 文档链接
+    rssFullText = false # LoveIt 新增 | 0.2.4 是否在 RSS 中显示全文内容
     
-[params.page.toc]
-    enable = true # 是否使用目录
-    keepStatic = false # 是否保持使用文章前面的静态目录
-    auto = true # 是否使侧边目录自动折叠展开
-
-[params.page.code]
-    copy = true # 是否显示代码块的复制按钮
-    maxShownLines = 50 # 默认展开显示的代码行数
-
-[params.page.math]
-    enable = false # KaTeX 数学公式配置 (https://katex.org/)
-    inlineLeftDelimiter = "" # 默认行内定界符是 $ ... $ 和 \( ... \)
-    inlineRightDelimiter = "" # 默认行内定界符是 $ ... $ 和 \( ... \)
-    blockLeftDelimiter = "" # 默认块定界符是 $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} 和一些其它的函数
-    blockRightDelimiter = "" # 默认块定界符是 $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} 和一些其它的函数
-    copyTex = true # KaTeX 插件 copy_tex
-    mhchem = true # KaTeX 插件 mhchem
-
-[params.page.mapbox]
-    accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ" # Mapbox GL JS 的 access token
-    lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true" # 浅色主题的地图样式
-    darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true" # 深色主题的地图样式
-    navigation = true # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-    geolocate = true # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-    scale = true # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-    fullscreen = true # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-
-[params.page.share]
-    enable = true # 文章页面的分享信息设置
-    Twitter = true
-    Facebook = true
-    Linkedin = false
-    Whatsapp = false
-    Pinterest = false
-    Tumblr = false
-    HackerNews = true
-    Reddit = false
-    VK = false
-    Buffer = false
-    Xing = false
-    Line = true
-    Instapaper = false
-    Pocket = false
-    Flipboard = false
-    Weibo = true
-    Blogger = false
-    Baidu = false
-    Odnoklassniki = false
-    Evernote = false
-    Skype = false
-    Trello = false
-    Mix = false
-
-[params.page.comment]
-    enable = true # 评论系统设置
-
-    [params.page.comment.disqus]
-        enable = false # Disqus 评论系统设置 (https://disqus.com/)
+    [params.page.toc]
+      enable = true # 是否使用目录
+      keepStatic = true # LoveIt 新增 | 0.2.9 是否保持使用文章前面的静态目录
+      auto = true # 是否使侧边目录自动折叠展开
+    
+    [params.page.code]
+      copy = true # 是否显示代码块的复制按钮
+      maxShownLines = 50 # 默认展开显示的代码行数
+    
+    [params.page.math]
+      enable = true # LoveIt 更改 | 0.2.0 KaTeX 数学公式
+      inlineLeftDelimiter = "" # LoveIt 更改 | 0.2.11 默认行内定界符是 $ ... $ 和 \( ... \)
+      inlineRightDelimiter = "" # LoveIt 更改 | 0.2.11 默认行内定界符是 $ ... $ 和 \( ... \)
+      blockLeftDelimiter = "" # LoveIt 更改 | 0.2.11 默认块定界符是 $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} 和一些其它的函数
+      blockRightDelimiter = "" # LoveIt 更改 | 0.2.11 默认块定界符是 $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} 和一些其它的函数
+      copyTex = true # KaTeX 插件 copy_tex
+      mhchem = true # KaTeX 插件 mhchem
+    
+    [params.page.mapbox]
+      accessToken = "" # Mapbox GL JS 的 access token
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true" # 浅色主题的地图样式
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true" # 深色主题的地图样式
+      navigation = true # 是否添加 NavigationControl
+      geolocate = true # 是否添加 GeolocateControl
+      scale = true # 是否添加 ScaleControl
+      fullscreen = true # 是否添加 FullscreenControl
+    
+    [params.page.share]
+      enable = true # LoveIt 更改 | 0.2.0 文章页面的分享信息设置
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = false
+      Pinterest = false
+      Tumblr = false
+      HackerNews = true
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = true
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
+    
+    [params.page.comment]
+      enable = false # LoveIt 更改 | 0.2.0 评论系统设置
+      
+      [params.page.comment.disqus]
+        enable = false # LoveIt 新增 | 0.1.1
         shortname = "" # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-
-    [params.page.comment.gitalk]
-        enable = false # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+      
+      [params.page.comment.gitalk]
+        enable = false # LoveIt 新增 | 0.1.1
         owner = ""
         repo = ""
         clientId = ""
         clientSecret = ""
-
-    [params.page.comment.valine]
-        enable = true # Valine 评论系统设置 (https://github.com/xCss/Valine)
-        appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-        appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
+      
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
         placeholder = ""
         avatar = "mp"
-        meta = ""
+        meta= ""
         pageSize = 10
         lang = "" # 为空时自动适配当前主题 i18n 配置
         visitor = true
         recordIP = true
         highlight = true
         enableQQ = false
-        serverURLs = "https://leancloud.hugoloveit.com"
-        emoji = "" # emoji 数据文件名称, 默认是 "google.yml"
-
-    [params.page.comment.facebook]
-        enable = false # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+        serverURLs = ""
+        emoji = "" # LoveIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml" ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"] 位于 "themes/LoveIt/assets/lib/valine/emoji/" 目录 可以在你的项目下相同路径存放你自己的数据文件: "assets/lib/valine/emoji/"
+      
+      [params.page.comment.facebook]
+        enable = false
         width = "100%"
         numPosts = 10
         appId = ""
-        languageCode = "" # 为空时自动适配当前主题 i18n 配置
-
-    [params.page.comment.telegram]
-        enable = false # Telegram comments 评论系统设置 (https://comments.app/)
+        languageCode = "zh_CN" # 为空时自动适配当前主题 i18n 配置
+      
+      [params.page.comment.telegram]
+        enable = false # LoveIt 新增 | 0.2.0 Telegram Comments 评论系统设置
         siteID = ""
         limit = 5
         height = ""
@@ -319,20 +312,20 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         colorful = true
         dislikes = false
         outlined = false
-
-    [params.page.comment.commento]
-        enable = false # Commento comment 评论系统设置 (https://commento.io/)
-
-    [params.page.comment.utterances]
-        enable = false # utterances comment 评论系统设置 (https://utteranc.es/)
+      
+      [params.page.comment.commento]
+        enable = false # LoveIt 新增 | 0.2.0 Commento 评论系统设置
+      
+      [params.page.comment.utterances]
+        enable = false # LoveIt 新增 | 0.2.5 utterances 评论系统设置
         repo = "" # owner/repo
         issueTerm = "pathname"
         label = ""
         lightTheme = "github-light"
         darkTheme = "github-dark"
-
-    [params.page.comment.giscus]
-        enable = false # giscus comment 评论系统设置 (https://giscus.app/zh-CN)
+      
+      [params.page.comment.giscus]
+        enable = false # giscus comment 评论系统设置 (https://giscus.app/zh-CN) 你可以参考官方文档来使用下列配置
         repo = ""
         repoId = ""
         category = "Announcements"
@@ -345,74 +338,65 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         lazyLoading = false
         lightTheme = "light"
         darkTheme = "dark"
-
-[params.page.library]
-    [params.page.library.css]
-        # someCSS = "some.css"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
-        # someCSS = "https://cdn.example.com/some.css"
-    [params.page.library.js]
-        # someJavascript = "some.js"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
-        # someJavascript = "https://cdn.example.com/some.js"
-
-[params.page.seo]
-    images = [] # 页面 SEO 配置
-
-    [params.page.seo.publisher]
-        name = "xxxx" # 出版者信息
+    
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css" 位于 "assets/" 或者 someCSS = "https://cdn.example.com/some.css" # LoveIt 新增 | 0.2.7 第三方库配置
+      [params.page.library.js]
+        # someJavascript = "some.js" 位于 "assets/" 或者 someJavascript = "https://cdn.example.com/some.js"
+    [params.page.seo]
+      images = [] # LoveIt 更改 | 0.2.10 页面 SEO 配置 图片 URL
+      [params.page.seo.publisher]
+        name = "" # 出版者信息
         logoUrl = "/images/avatar.png"
 
-[params.typeit]
-    speed = 100 # 每一步的打字速度 (单位是毫秒)
+  [params.typeit]
+    speed = 100 # LoveIt 新增 | 0.2.5 TypeIt 配置 每一步的打字速度 (单位是毫秒)
     cursorSpeed = 1000 # 光标的闪烁速度 (单位是毫秒)
     cursorChar = "|" # 光标的字符 (支持 HTML 格式)
     duration = -1 # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
 
-[params.verification]
-    google = "" # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
+  [params.cdn]
+    data = "" # CDN 数据文件名称, 默认不启用 ["jsdelivr.yml"]
+
+  [params.verification]
+    google = ""
     bing = ""
     yandex = ""
     pinterest = ""
-    baidu = ""
+    baidu = "" # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
 
-[params.seo]
-    image = "/images/Apple-Devices-Preview.png" # 网站 SEO 配置
-    thumbnailUrl = "/images/screenshot.png"
+  [params.seo]
+    image = "" # LoveIt 新增 | 0.2.10 网站 SEO 配置 图片 URL
+    thumbnailUrl = "" # 缩略图 URL
 
-[params.analytics]
-    enable = false # 网站分析配置
-
+  [params.analytics]
+    enable = false # LoveIt 新增 | 0.2.0 网站分析配置
     [params.analytics.google]
-        id = "" # Google Analytics
-        anonymizeIP = true # 是否匿名化用户 IP
-
+      id = "" # Google Analytics
+      anonymizeIP = true # 是否匿名化用户 IP
     [params.analytics.fathom]
-        id = "" # Fathom Analytics
-        server = "" # 自行托管追踪器时的主机路径
-
+      id = ""
+      server = "" # 自行托管追踪器时的主机路径
     [params.analytics.plausible]
-        dataDomain = "" # Plausible Analytics
-
+      dataDomain = ""
     [params.analytics.yandexMetrica]
-        id = "" # Yandex Metrica
+      id = ""
 
-[params.cookieconsent]
-    enable = false # Cookie 许可配置
+    [params.cookieconsent]
+        enable = false # Cookie 许可配置
 
-    [params.cookieconsent.content]
-        message = "" # 用于 Cookie 许可横幅的文本字符串
-        dismiss = ""
-        link = ""
+        [params.cookieconsent.content]
+            message = "" # 用于 Cookie 许可横幅的文本字符串
+            dismiss = ""
+            link = ""
 
-[params.cdn]
-    data = "jsdelivr.yml" # 第三方库文件的 CDN 设置
+    # [params.cdn]
+    #     data = "jsdelivr.yml" # 第三方库文件的 CDN 设置
 
-[params.compatibility]
-    polyfill = false # 是否使用 Polyfill.io 来兼容旧式浏览器
-    objectFit = false # 是否使用 object-fit-images 来兼容旧式浏览器
+    [params.compatibility]
+        polyfill = false # 是否使用 Polyfill.io 来兼容旧式浏览器
+        objectFit = false # 是否使用 object-fit-images 来兼容旧式浏览器
 
 [markup]
     [markup.highlight]
@@ -465,207 +449,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     isHTML = false
 
 [outputs]
-    home = ["HTML", "RSS", "JSON"] # 用于 Hugo 输出文档的设置
-    page = ["HTML", "MarkDown"]
-    section = ["HTML", "RSS"]
-    taxonomy = ["HTML", "RSS"]
-    taxonomyTerm = ["HTML"]
+  home = ["HTML", "RSS", "Algolia"]
 
-[languages]
-    [languages.en]
-        weight = 1 # 多语言
-        languageCode = "en"
-        languageName = "English"
-        hasCJKLanguage = false
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-
-        [languages.en.menu]
-            [[languages.en.menu.main]]
-                weight = 1
-                identifier = "posts"
-                pre = ""
-                post = ""
-                name = "Posts"
-                url = "/posts/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 2
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "Tags"
-                url = "/tags/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 3
-                identifier = "categories"
-                pre = ""
-                post = ""
-                name = "Categories"
-                url = "/categories/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 4
-                identifier = "documentation"
-                pre = ""
-                post = ""
-                name = "Docs"
-                url = "/categories/documentation/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 5
-                identifier = "about"
-                pre = ""
-                post = ""
-                name = "About"
-                url = "/about/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 6
-                identifier = "github"
-                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/dillonzq/LoveIt"
-                title = "GitHub"
-
-        [languages.en.params]
-            [languages.en.params.search]
-                enable = true
-                type = "algolia"
-                contentLength = 4000
-                placeholder = ""
-                maxResultLength = 10
-                snippetLength = 30
-                highlightTag = "em"
-                absoluteURL = false
-
-                [languages.en.params.search.algolia]
-                    index = "index.en"
-                    appID = "PASDMWALPK"
-                    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
-
-            [languages.en.params.home]
-                rss = 10
-
-                [languages.en.params.home.profile]
-                    enable = true
-                    gravatarEmail = ""
-                    avatarURL = "/images/avatar.png"
-                    title = ""
-                    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
-                    typeit = true
-                    social = true
-                    disclaimer = ""
-
-            [languages.en.params.social]
-                GitHub = "xxxx"
-                Twitter = "xxxx"
-                Instagram = "xxxx"
-                Facebook = "xxxx"
-                Telegram = "xxxx"
-                Youtubelegacy = "xxxx"
-                Phone = "555-555-555"
-                Email = "xxxx@xxxx.com"
-                RSS = true
-
-                [languages.en.params.social.Mastodon]
-                    id = "@xxxx"
-                    prefix = "https://mastodon.technology/"
-
-    [languages.zh-cn]
-        weight = 2 # 多语言
-        languageCode = "zh-CN"
-        languageName = "简体中文"
-        hasCJKLanguage = true
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-
-        [languages.zh-cn.menu]
-            [[languages.zh-cn.menu.main]]
-                weight = 1
-                identifier = "posts"
-                pre = ""
-                post = ""
-                name = "所有文章"
-                url = "/posts/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 2
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "标签"
-                url = "/tags/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 3
-                identifier = "categories"
-                pre = ""
-                post = ""
-                name = "分类"
-                url = "/categories/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 4
-                identifier = "documentation"
-                pre = ""
-                name = "文档"
-                url = "/categories/documentation/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 5
-                identifier = "about"
-                pre = ""
-                post = ""
-                name = "关于"
-                url = "/about/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 6
-                identifier = "github"
-                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/dillonzq/LoveIt"
-                title = "GitHub"
-
-        [languages.zh-cn.params]
-            [languages.zh-cn.params.search]
-                enable = true
-                type = "algolia"
-                contentLength = 4000
-                placeholder = ""
-                maxResultLength = 10
-                snippetLength = 50
-                highlightTag = "em"
-                absoluteURL = false
-
-                [languages.zh-cn.params.search.algolia]
-                    index = "index.zh-cn"
-                    appID = "PASDMWALPK"
-                    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
-
-            [languages.zh-cn.params.home]
-                rss = 10
-
-                [languages.zh-cn.params.home.profile]
-                    enable = true
-                    gravatarEmail = ""
-                    avatarURL = "/images/avatar.png"
-                    title = ""
-                    subtitle = "一个简洁、优雅且高效的 Hugo 主题"
-                    typeit = true
-                    social = true
-                    disclaimer = ""
-
-            [languages.zh-cn.params.social]
-                GitHub = "xxxx"
-                Weibo = "xxxx"
-                Steam = "xxxx"
-                Zhihu = "xxxx"
-                Douban = "xxxx"
-                Devto = "xxxx"
-                Bilibili = "xxxx"
-                Email = "xxxx@xxxx.com"
-                Phone = "555-555-555"
-                RSS = true
+  [outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = true
+    mediaType = "application/json"
+    notAlternative = true
