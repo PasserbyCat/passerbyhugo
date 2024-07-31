@@ -458,107 +458,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     notAlternative = true
 
 [languages]
-    [languages.en]
-        weight = 1 # 多语言
-        languageCode = "en"
-        languageName = "English"
-        hasCJKLanguage = false
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-
-        [languages.en.menu]
-            [[languages.en.menu.main]]
-                weight = 1
-                identifier = "posts"
-                pre = ""
-                post = ""
-                name = "Posts"
-                url = "/posts/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 2
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "Tags"
-                url = "/tags/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 3
-                identifier = "categories"
-                pre = ""
-                post = ""
-                name = "Categories"
-                url = "/categories/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 4
-                identifier = "documentation"
-                pre = ""
-                post = ""
-                name = "Docs"
-                url = "/categories/documentation/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 5
-                identifier = "about"
-                pre = ""
-                post = ""
-                name = "About"
-                url = "/about/"
-                title = ""
-            [[languages.en.menu.main]]
-                weight = 6
-                identifier = "github"
-                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/dillonzq/LoveIt"
-                title = "GitHub"
-
-        [languages.en.params]
-            [languages.en.params.search]
-                enable = true
-                type = "algolia"
-                contentLength = 4000
-                placeholder = ""
-                maxResultLength = 10
-                snippetLength = 30
-                highlightTag = "em"
-                absoluteURL = false
-
-                [languages.en.params.search.algolia]
-                    index = "index.en"
-                    appID = "PASDMWALPK"
-                    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
-
-            [languages.en.params.home]
-                rss = 10
-
-                [languages.en.params.home.profile]
-                    enable = true
-                    gravatarEmail = ""
-                    avatarURL = "/images/avatar.png"
-                    title = ""
-                    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
-                    typeit = true
-                    social = true
-                    disclaimer = ""
-
-            [languages.en.params.social]
-                GitHub = "xxxx"
-                Twitter = "xxxx"
-                Instagram = "xxxx"
-                Facebook = "xxxx"
-                Telegram = "xxxx"
-                Youtubelegacy = "xxxx"
-                Phone = "555-555-555"
-                Email = "xxxx@xxxx.com"
-                RSS = true
-
-                [languages.en.params.social.Mastodon]
-                    id = "@xxxx"
-                    prefix = "https://mastodon.technology/"
-
     [languages.zh-cn]
         weight = 2 # 多语言
         languageCode = "zh-CN"
@@ -569,14 +468,21 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         [languages.zh-cn.menu]
             [[languages.zh-cn.menu.main]]
                 weight = 1
-                identifier = "posts"
+                identifier = "book"
                 pre = ""
                 post = ""
-                name = "所有文章"
-                url = "/posts/"
+                name = "书评"
+                url = "/book/"
                 title = ""
             [[languages.zh-cn.menu.main]]
                 weight = 2
+                identifier = "blog"
+                pre = ""
+                name = "小屋"
+                url = "/blog/"
+                title = ""
+            [[languages.zh-cn.menu.main]]
+                weight = 3
                 identifier = "tags"
                 pre = ""
                 post = ""
@@ -584,19 +490,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 url = "/tags/"
                 title = ""
             [[languages.zh-cn.menu.main]]
-                weight = 3
+                weight = 4
                 identifier = "categories"
                 pre = ""
                 post = ""
                 name = "分类"
                 url = "/categories/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 4
-                identifier = "documentation"
-                pre = ""
-                name = "文档"
-                url = "/categories/documentation/"
                 title = ""
             [[languages.zh-cn.menu.main]]
                 weight = 5
@@ -612,14 +511,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
                 post = ""
                 name = ""
-                url = "https://github.com/dillonzq/LoveIt"
+                url = "https://github.com/passerbycat"
                 title = "GitHub"
 
         [languages.zh-cn.params]
             [languages.zh-cn.params.search]
                 enable = true
                 type = "algolia"
-                contentLength = 4000
+                contentLength = 1000
                 placeholder = ""
                 maxResultLength = 10
                 snippetLength = 50
@@ -628,8 +527,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
 
                 [languages.zh-cn.params.search.algolia]
                     index = "index.zh-cn"
-                    appID = "PASDMWALPK"
-                    searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+                    appID = "L1WEB26MB8"
+                    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
 
             [languages.zh-cn.params.home]
                 rss = 10
@@ -643,18 +542,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                     typeit = true
                     social = true
                     disclaimer = ""
-
-            [languages.zh-cn.params.social]
-                GitHub = "xxxx"
-                Weibo = "xxxx"
-                Steam = "xxxx"
-                Zhihu = "xxxx"
-                Douban = "xxxx"
-                Devto = "xxxx"
-                Bilibili = "xxxx"
-                Email = "xxxx@xxxx.com"
-                Phone = "555-555-555"
-                RSS = true
         
     [languages.zh-tw]
         weight = 3 # 多语言
@@ -674,33 +561,33 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 title = ""
             [[languages.zh-tw.menu.main]]
                 weight = 2
-                identifier = "tags"
+                identifier = "blog"
                 pre = ""
-                post = ""
-                name = "标签"
-                url = "/tags/"
+                name = "小屋"
+                url = "/blog/"
                 title = ""
             [[languages.zh-tw.menu.main]]
                 weight = 3
-                identifier = "categories"
+                identifier = "tags"
                 pre = ""
                 post = ""
-                name = "分类"
-                url = "/categories/"
+                name = "標籤"
+                url = "/tags/"
                 title = ""
             [[languages.zh-tw.menu.main]]
                 weight = 4
-                identifier = "documentation"
+                identifier = "categories"
                 pre = ""
-                name = "文档"
-                url = "/categories/documentation/"
+                post = ""
+                name = "分類"
+                url = "/categories/"
                 title = ""
             [[languages.zh-tw.menu.main]]
                 weight = 5
                 identifier = "about"
                 pre = ""
                 post = ""
-                name = "关于"
+                name = "關於"
                 url = "/about/"
                 title = ""
             [[languages.zh-tw.menu.main]]
@@ -709,14 +596,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                 pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
                 post = ""
                 name = ""
-                url = "https://github.com/dillonzq/LoveIt"
+                url = "https://github.com/passerbycat"
                 title = "GitHub"
 
         [languages.zh-tw.params]
             [languages.zh-tw.params.search]
                 enable = true
                 type = "algolia"
-                contentLength = 4000
+                contentLength = 1000
                 placeholder = ""
                 maxResultLength = 10
                 snippetLength = 50
@@ -742,13 +629,5 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
                     disclaimer = ""
 
             [languages.zh-tw.params.social]
-                GitHub = "xxxx"
-                Weibo = "xxxx"
-                Steam = "xxxx"
-                Zhihu = "xxxx"
-                Douban = "xxxx"
-                Devto = "xxxx"
-                Bilibili = "xxxx"
-                Email = "xxxx@xxxx.com"
-                Phone = "555-555-555"
+                GitHub = "passerbycat"
                 RSS = true
