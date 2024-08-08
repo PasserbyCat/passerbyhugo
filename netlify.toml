@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo"
+  command = "hugo --gc --minify && npm install atomic-algolia --save-dev && npm run algolia"
 
 [context.production.environment]
   ALGOLIA_APP_ID = "L1WEB26MB8"
