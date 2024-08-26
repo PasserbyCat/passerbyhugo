@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>數據 - 標籤 - 路人貓的小屋</title>
+        <link>http://localhost:1313/tags/%E6%95%B8%E6%93%9A/</link>
+        <description>數據 - 標籤 - 路人貓的小屋</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-TW</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Aug 2024 09:11:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B8%E6%93%9A/" rel="self" type="application/rss+xml" /><item>
+    <title>Binary Prediction of Poisonous Mushrooms</title>
+    <link>http://localhost:1313/blog/kaggle_%E4%BA%8C%E5%85%83%E6%AF%92%E8%8F%87%E9%A0%90%E6%B8%AC/</link>
+    <pubDate>Sat, 24 Aug 2024 09:11:00 &#43;0800</pubDate>
+    <author>passerbycat</author>
+    <guid>http://localhost:1313/blog/kaggle_%E4%BA%8C%E5%85%83%E6%AF%92%E8%8F%87%E9%A0%90%E6%B8%AC/</guid>
+    <description><![CDATA[動機 段落補充經文 (Numbers 33:37)從加低斯起行，安營在何珥山，以東地的邊界。 (Numbers 13:26)到了巴蘭曠野的加低斯，見摩西、亞倫，並以色列的全會眾，]]></description>
+</item>
+</channel>
+</rss>

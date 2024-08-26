@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>推薦 - 標籤 - 路人貓的小屋</title>
+        <link>http://localhost:1313/tags/%E6%8E%A8%E8%96%A6/</link>
+        <description>推薦 - 標籤 - 路人貓的小屋</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-TW</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 23 Aug 2024 16:08:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%8E%A8%E8%96%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>三體I_劉慈欣</title>
+    <link>http://localhost:1313/book/%E4%B8%89%E9%AB%94i/</link>
+    <pubDate>Fri, 23 Aug 2024 16:08:00 &#43;0800</pubDate>
+    <author>passerbycat</author>
+    <guid>http://localhost:1313/book/%E4%B8%89%E9%AB%94i/</guid>
+    <description><![CDATA[書名：三體 作者：劉慈欣 出版社：貓頭鷹 內容簡介 「全人類都將為這個事業付出史無前例的巨大犧牲」 無論是和平還是災難，都只會成為歷史，甚至毫無痕跡。]]></description>
+</item>
+<item>
+    <title>偷書賊_馬格斯•朱薩克</title>
+    <link>http://localhost:1313/book/%E5%81%B7%E6%9B%B8%E8%B3%8A/</link>
+    <pubDate>Mon, 22 Jul 2024 13:38:33 &#43;0800</pubDate>
+    <author>passerbycat</author>
+    <guid>http://localhost:1313/book/%E5%81%B7%E6%9B%B8%E8%B3%8A/</guid>
+    <description><![CDATA[書名：偷書賊 作者：馬格斯•朱薩克 出版社：木馬文化 內容簡介 「I am haunted by humans」 以死神的角度，見證人類的弔詭。 從死神的第一人稱視角，講述二戰]]></description>
+</item>
+<item>
+    <title>最後14堂星期二的課_米奇•艾爾邦</title>
+    <link>http://localhost:1313/book/%E6%9C%80%E5%BE%8C14%E5%A0%82%E6%98%9F%E6%9C%9F%E4%BA%8C%E7%9A%84%E8%AA%B2/</link>
+    <pubDate>Mon, 22 Jul 2024 13:38:33 &#43;0800</pubDate>
+    <author>passerbycat</author>
+    <guid>http://localhost:1313/book/%E6%9C%80%E5%BE%8C14%E5%A0%82%E6%98%9F%E6%9C%9F%E4%BA%8C%E7%9A%84%E8%AA%B2/</guid>
+    <description><![CDATA[書名：最後14堂星期二的課 作者：米奇•艾爾邦 出版社：大塊文化 內容簡介 「每個人都知道自己有一天會死，但沒有人把這當真。」 見證一個人的死亡。 我們]]></description>
+</item>
+<item>
+    <title>方舟_夕木春央</title>
+    <link>http://localhost:1313/book/%E6%96%B9%E8%88%9F/</link>
+    <pubDate>Wed, 03 Jul 2024 14:40:14 &#43;0800</pubDate>
+    <author>passerbycat</author>
+    <guid>http://localhost:1313/book/%E6%96%B9%E8%88%9F/</guid>
+    <description><![CDATA[書名：方舟 作者：夕木春央 出版社：獨步文化 內容簡介 「無論如何，我真想活著回去。」 稀鬆平常的推理故事，留下不一樣的結尾。 故事的開始便是十人受困方]]></description>
+</item>
+</channel>
+</rss>
