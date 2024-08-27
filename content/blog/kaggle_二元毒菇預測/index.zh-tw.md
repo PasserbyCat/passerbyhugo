@@ -53,6 +53,15 @@ train_data.info()
 {{< /admonition >}}
 
 ```python
+# 顯示訓練數據集各列的數據類型及其非空值的數量
+msno.bar(train_data)
+```
+
+{{< admonition type=quote title="output" open=false >}}
+![plot07](/images/毒菇分析/plot07.png) 
+{{< /admonition >}}
+
+```python
 # 計算並打印目標變量（類別）的每個類別的樣本數量
 print(train_data['class'].value_counts())
 

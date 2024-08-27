@@ -105,4 +105,4 @@ draft: false
 
 ## 參考路線  
 網址 : [https://biblegeography.holylight.org.tw/images/index/condensedbible/map/024.GIF](https://biblegeography.holylight.org.tw/images/index/condensedbible/map/024.GIF)  
-![出埃及路線](/images/信仰的關卡01.gif)  
+![出埃及路線](/images/信仰的關卡/信仰的關卡01.gif)  
