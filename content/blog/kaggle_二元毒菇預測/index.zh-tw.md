@@ -53,7 +53,7 @@ train_data.info()
 {{< /admonition >}}
 
 ```python
-# 顯示訓練數據集各列的數據類型及其非空值的數量
+# 計算並顯示每個特徵（欄位）中缺失值的數量
 msno.bar(train_data)
 ```
 
