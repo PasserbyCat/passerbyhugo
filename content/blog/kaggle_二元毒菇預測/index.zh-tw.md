@@ -9,7 +9,7 @@ draft: false
 
 ## 動機  
 我最一開始的動機相當簡單，就是kaggle上的獎勵，實在有點讓人心動，於是我便選擇了這個挑戰作為我的報告主題。  
-![plot01](/images/毒菇分析/plot01.png)  
+![plot01](/images/kaggle_二元毒菇預測/plot01.png)  
 
 ## 資料集分析  
 ```python
@@ -49,7 +49,7 @@ train_data.info()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot02](/images/毒菇分析/plot02.png) 
+![plot02](/images/kaggle_二元毒菇預測/plot02.png) 
 {{< /admonition >}}
 
 ```python
@@ -58,7 +58,7 @@ msno.bar(train_data)
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot07](/images/毒菇分析/plot07.png) 
+![plot07](/images/kaggle_二元毒菇預測/plot07.png) 
 {{< /admonition >}}
 
 ```python
@@ -76,7 +76,7 @@ plt.show()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot03](/images/毒菇分析/plot03.png) 
+![plot03](/images/kaggle_二元毒菇預測/plot03.png) 
 {{< /admonition >}}
 
 ```python
@@ -117,7 +117,7 @@ plt.show()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot04](/images/毒菇分析/plot04.png) 
+![plot04](/images/kaggle_二元毒菇預測/plot04.png) 
 {{< /admonition >}}
 
 ## 資料集處理
@@ -210,7 +210,7 @@ train_data.isna().sum()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot05](/images/毒菇分析/plot05.png) 
+![plot05](/images/kaggle_二元毒菇預測/plot05.png) 
 {{< /admonition >}}
 
 ```python
@@ -296,5 +296,5 @@ submission_df.to_csv('submission.csv', index=False)
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot06](/images/毒菇分析/plot06.png) 
+![plot06](/images/kaggle_二元毒菇預測/plot06.png) 
 {{< /admonition >}}

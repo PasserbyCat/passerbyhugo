@@ -105,4 +105,4 @@ draft: false
 
 ## 参考路线  
 网址 : [https://biblegeography.holylight.org.tw/images/index/condensedbible/map/024.GIF](https://biblegeography.holylight.org.tw/images/index/condensedbible/map/024.GIF)  
-![出埃及路线](/images/信仰的關卡/信仰的關卡01.gif)  
+![出埃及路线](/images/信仰的關卡_加低斯/plot01.gif)  
