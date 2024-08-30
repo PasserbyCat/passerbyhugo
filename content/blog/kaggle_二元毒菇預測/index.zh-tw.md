@@ -156,7 +156,7 @@ def cleaning(df):
         # 計算每個類別的頻率，將頻率低於閾值的類別標記為 'noise'
         counts = df[feat].value_counts(dropna=False)
         infrequent_categories = counts[counts < threshold].index
-        df[feat] = df[feat].apply(lambda x: 'missing' if x in infrequent_categories else x)
+        df[feat] = df[feat].apply(lambda x: 'noise' if x in infrequent_categories else x)
     
     # 返回清理過後的數據框
     return df
