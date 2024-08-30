@@ -21,7 +21,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 import optuna
-from sklearn.metrics import matthews_corrcoef
+from sklearn.metrics import matthews_corrcoef, confusion_matrix, ConfusionMatrixDisplay
 import scipy
 import warnings
 warnings.filterwarnings('ignore')  # 忽略警告訊息
@@ -297,4 +297,17 @@ submission_df.to_csv('submission.csv', index=False)
 
 {{< admonition type=quote title="output" open=false >}}
 ![plot06](/images/kaggle_二元毒菇預測/plot06.png) 
+{{< /admonition >}}
+
+```python
+y_test_pred = model.predict(X_test)
+cm = confusion_matrix(y_test, y_test_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=label_encoder.classes_)
+disp.plot(cmap=plt.cm.Blues)
+plt.title('Confusion Matrix')
+plt.show()
+```
+
+{{< admonition type=quote title="output" open=false >}}
+![plot08](/images/kaggle_二元毒菇預測/plot08.png) 
 {{< /admonition >}}
