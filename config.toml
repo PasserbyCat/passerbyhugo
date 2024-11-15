@@ -23,28 +23,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
   email = ""
   link = ""
 
-[menu] # 菜單配置
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog/"
-    weight = 1
-    pre = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
-    post = "" # 你可以在名稱（允許html格式）之前添加其他訊息，例如圖示
-    title = "" # 當鼠標停在此處時，顯示的標題
-  
-  [[menu.main]]
-    identifier = "book"
-    name = "Books"
-    url = "/book/"
-    weight = 2
-
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-
 [params]
   defaultTheme = "auto" # 網站預設的背景顏色["auto", "light", "dark"]
   gitRepo = "" # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
@@ -440,191 +418,202 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     [mediaTypes."text/plain"]
         suffixes = ["md"] # 用于输出 Markdown 格式文档的设置
 
-[outputFormats.MarkDown]
+[outputs]
+  home = ["HTML", "RSS", "Algolia"]
+
+[outputFormats]
+  [outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = false # JSON 是结构化格式，不应视为纯文本
+    mediaType = "application/json"
+    notAlternative = true
+
+  [outputFormats.Markdown]
     mediaType = "text/plain" # 用于输出 Markdown 格式文档的设置
     isPlainText = true
     isHTML = false
 
-[outputs]
-  home = ["HTML", "RSS", "Algolia"]
-
-  [outputFormats.Algolia]
-    baseName = "algolia"
-    isPlainText = true
-    mediaType = "application/json"
-    notAlternative = true
-
 [languages]
-    [languages.zh-cn]
-        weight = 2 # 多语言
-        languageCode = "zh-CN"
-        languageName = "简体中文"
-        hasCJKLanguage = true
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+  [languages.zh-tw]
+    weight = 1 # 多语言
+    languageCode = "zh-TW"
+    languageName = "繁體中文"
+    hasCJKLanguage = true
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
-        [languages.zh-cn.menu]
-            [[languages.zh-cn.menu.main]]
-                weight = 1
-                identifier = "book"
-                pre = ""
-                post = ""
-                name = "书评"
-                url = "/book/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 2
-                identifier = "blog"
-                pre = ""
-                name = "小屋"
-                url = "/blog/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 3
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "标签"
-                url = "/tags/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 4
-                identifier = "categories"
-                pre = ""
-                post = ""
-                name = "分类"
-                url = "/categories/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 5
-                identifier = "about"
-                pre = ""
-                post = ""
-                name = "关于"
-                url = "/about/"
-                title = ""
-            [[languages.zh-cn.menu.main]]
-                weight = 6
-                identifier = "github"
-                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/passerbycat"
-                title = "GitHub"
+    [languages.zh-tw.menu]
+      [[languages.zh-tw.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "書評"
+        url = "/book/"
+        title = ""
+      
+      [[languages.zh-tw.menu.main]]
+        weight = 2
+        identifier = "blog"
+        pre = ""
+        name = "小屋"
+        url = "/blog/"
+        title = ""
+      
+      [[languages.zh-tw.menu.main]]
+        weight = 3
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "標籤"
+        url = "/tags/"
+        title = ""
+      
+      [[languages.zh-tw.menu.main]]
+        weight = 4
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "分類"
+        url = "/categories/"
+        title = ""
+      
+      [[languages.zh-tw.menu.main]]
+        weight = 5
+        identifier = "about"
+        pre = ""
+        post = ""
+        name = "關於"
+        url = "/about/"
+        title = ""
+      
+      [[languages.zh-tw.menu.main]]
+        weight = 6
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/passerbycat"
+        title = "GitHub"
 
-        [languages.zh-cn.params]
-            [languages.zh-cn.params.search]
-                enable = true
-                type = "algolia"
-                contentLength = 1000
-                placeholder = ""
-                maxResultLength = 10
-                snippetLength = 50
-                highlightTag = "em"
-                absoluteURL = false
+    [languages.zh-tw.params]
+      [languages.zh-tw.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 1000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 50
+        highlightTag = "em"
+        absoluteURL = false
 
-                [languages.zh-cn.params.search.algolia]
-                    index = "index.zh-cn"
-                    appID = "L1WEB26MB8"
-                    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
+        [languages.zh-tw.params.search.algolia]
+          index = "my_index"
+          appID = "L1WEB26MB8"
+          searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
 
-            [languages.zh-cn.params.home]
-                rss = 10
+      [languages.zh-tw.params.home]
+        rss = 10
 
-                [languages.zh-cn.params.home.profile]
-                    enable = true
-                    gravatarEmail = ""
-                    avatarURL = "/images/avatar.png"
-                    title = ""
-                    subtitle = ""
-                    typeit = true
-                    social = true
-                    disclaimer = ""
-        
-    [languages.zh-tw]
-        weight = 3 # 多语言
-        languageCode = "zh-TW"
-        languageName = "繁體中文"
-        hasCJKLanguage = true
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+        [languages.zh-tw.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/avatar.png"
+          title = ""
+          subtitle = ""
+          typeit = true
+          social = true
+          disclaimer = ""
 
-        [languages.zh-tw.menu]
-            [[languages.zh-tw.menu.main]]
-                weight = 1
-                identifier = "posts"
-                pre = ""
-                post = ""
-                name = "書評"
-                url = "/book/"
-                title = ""
-            [[languages.zh-tw.menu.main]]
-                weight = 2
-                identifier = "blog"
-                pre = ""
-                name = "小屋"
-                url = "/blog/"
-                title = ""
-            [[languages.zh-tw.menu.main]]
-                weight = 3
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "標籤"
-                url = "/tags/"
-                title = ""
-            [[languages.zh-tw.menu.main]]
-                weight = 4
-                identifier = "categories"
-                pre = ""
-                post = ""
-                name = "分類"
-                url = "/categories/"
-                title = ""
-            [[languages.zh-tw.menu.main]]
-                weight = 5
-                identifier = "about"
-                pre = ""
-                post = ""
-                name = "關於"
-                url = "/about/"
-                title = ""
-            [[languages.zh-tw.menu.main]]
-                weight = 6
-                identifier = "github"
-                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/passerbycat"
-                title = "GitHub"
+      [languages.zh-tw.params.social]
+        GitHub = "passerbycat"
+        RSS = true
 
-        [languages.zh-tw.params]
-            [languages.zh-tw.params.search]
-                enable = true
-                type = "algolia"
-                contentLength = 1000
-                placeholder = ""
-                maxResultLength = 10
-                snippetLength = 50
-                highlightTag = "em"
-                absoluteURL = false
+  [languages.zh-cn]
+    weight = 2 # 多语言
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    hasCJKLanguage = true
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
-                [languages.zh-tw.params.search.algolia]
-                    index = "my_index"
-                    appID = "L1WEB26MB8"
-                    searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
-    
-            [languages.zh-tw.params.home]
-                rss = 10
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        weight = 1
+        identifier = "book"
+        pre = ""
+        post = ""
+        name = "书评"
+        url = "/book/"
+        title = ""
+      
+      [[languages.zh-cn.menu.main]]
+        weight = 2
+        identifier = "blog"
+        pre = ""
+        name = "小屋"
+        url = "/blog/"
+        title = ""
+      
+      [[languages.zh-cn.menu.main]]
+        weight = 3
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "标签"
+        url = "/tags/"
+        title = ""
+      
+      [[languages.zh-cn.menu.main]]
+        weight = 4
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "分类"
+        url = "/categories/"
+        title = ""
+      
+      [[languages.zh-cn.menu.main]]
+        weight = 5
+        identifier = "about"
+        pre = ""
+        post = ""
+        name = "关于"
+        url = "/about/"
+        title = ""
+      
+      [[languages.zh-cn.menu.main]]
+        weight = 6
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/passerbycat"
+        title = "GitHub"
 
-                [languages.zh-tw.params.home.profile]
-                    enable = true
-                    gravatarEmail = ""
-                    avatarURL = "/images/avatar.png"
-                    title = ""
-                    subtitle = ""
-                    typeit = true
-                    social = true
-                    disclaimer = ""
+    [languages.zh-cn.params]
+      [languages.zh-cn.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 1000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 50
+        highlightTag = "em"
+        absoluteURL = false
 
-            [languages.zh-tw.params.social]
-                GitHub = "passerbycat"
-                RSS = true
+        [languages.zh-cn.params.search.algolia]
+          index = "index.zh-cn"
+          appID = "L1WEB26MB8"
+          searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
+
+      [languages.zh-cn.params.home]
+        rss = 10
+
+        [languages.zh-cn.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/avatar.png"
+          title = ""
+          subtitle = ""
+          typeit = true
+          social = true
+          disclaimer = ""
