@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Book - 分类 - 路人貓的小屋</title>
+        <title>Book - 分类 - 路人猫的小屋</title>
         <link>http://localhost:1313/zh-cn/categories/book/</link>
-        <description>Book - 分类 - 路人貓的小屋</description>
+        <description>Book - 分类 - 路人猫的小屋</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Aug 2024 13:34:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/categories/book/" rel="self" type="application/rss+xml" /><item>
     <title>耶路撒冷三千年_赛门•蒙提费欧里</title>
     <link>http://localhost:1313/zh-cn/%E8%80%B6%E8%B7%AF%E6%92%92%E5%86%B7%E4%B8%89%E5%8D%83%E5%B9%B4/</link>

@@ -1,16 +1,12 @@
 baseURL = "https://passerbycat.netlify.app/"
 theme = "LoveIt" # 更改hugo當前預設使用的主題
-title = "路人貓的小屋" # 網站標題
-
-languageCode = "zh-tw" # 網站語言
-languageName = "繁體中文" # 語言名稱
-hasCJKLanguage = true # 是否包含中日韓文字
 
 defaultContentLanguage = "zh-tw"
 
 paginate = 12 # 每頁預設顯示的文章數量
 googleAnalytics = "" # google分析代號 [UA-XXXXXXXX-X]
-copyright = "" # 版權描述，僅僅用於SEO
+hasCJKLanguage = true
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
 enableRobotsTXT = true # 是否使用robots.txt
 enableGitInfo = true # 是否使用git訊息
@@ -35,13 +31,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
   [params.header]
     desktopMode = "fixed" # 桌面端导航栏模式 ["fixed", "normal", "auto"]
     mobileMode = "auto" # 移动端导航栏模式 ["fixed", "normal", "auto"]
-
-    [params.header.title]
-      logo = "" # LOGO 的 URL
-      name = "路人貓的小屋" # 标题名称
-      pre = "" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      post = "" # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-      typeit = false # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
 
   [params.footer]
     enable = true # 页面底部信息配置
@@ -70,35 +59,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     themeColor = "#ffffff" # Android 浏览器主题色
     iconColor = "#5bbad5" # Safari 图标颜色
     tileColor = "#da532c" # Windows v8-10磁贴颜色
-  
-  [params.search]
-    enable = true
-    type = "algolia" # 搜索引擎的类型 ["lunr", "algolia"]
-    contentLength = 4000 # 文章内容最长索引长度
-    placeholder = "" # 搜索框的占位提示语
-    maxResultLength = 10 # LoveIt 新增 | 0.2.1 最大结果数目
-    snippetLength = 50 # LoveIt 新增 | 0.2.3 结果内容片段长度
-    highlightTag = "em" # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
-    absoluteURL = false # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
-    
-    [params.search.algolia]
-      index = "my_index"
-      appID = "L1WEB26MB8"
-      searchKey = "9f9aea9d9fe43c35aab7a54bcc7e336b"
 
-  [params.home]
-    rss = 10 # LoveIt 新增 | 0.2.0 RSS 文章数目
-    
-    [params.home.profile]
-      enable = true
-      gravatarEmail = "" # Gravatar 邮箱，用于优先在主页显示的头像
-      avatarURL = "/images/avatar.png" # 主页显示头像的 URL
-      title = "" # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
-      subtitle = "歡迎來到路人貓的小屋" # 主页显示的网站副标题 (允许 HTML 格式)
-      typeit = true # 是否为副标题显示打字机动画
-      social = true # 是否显示社交账号
-      disclaimer = "" # LoveIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)
-    
+  [params.home] # 部分內容在language
     [params.home.posts]
       enable = true
       paginate = 6 # 主页每页显示文章数量
@@ -361,62 +323,60 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     [params.analytics.yandexMetrica]
       id = ""
 
-    [params.cookieconsent]
-        enable = false # Cookie 许可配置
+  [params.cookieconsent]
+    enable = false # Cookie 许可配置
 
-        [params.cookieconsent.content]
-            message = "" # 用于 Cookie 许可横幅的文本字符串
-            dismiss = ""
-            link = ""
+    [params.cookieconsent.content]
+      message = "" # 用于 Cookie 许可横幅的文本字符串
+      dismiss = ""
+      link = ""
 
-    [params.compatibility]
-        polyfill = false # 是否使用 Polyfill.io 来兼容旧式浏览器
-        objectFit = false # 是否使用 object-fit-images 来兼容旧式浏览器
+  [params.compatibility]
+    polyfill = false # 是否使用 Polyfill.io 来兼容旧式浏览器
+    objectFit = false # 是否使用 object-fit-images 来兼容旧式浏览器
 
 [markup]
-    [markup.highlight]
-        codeFences = true # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-        guessSyntax = true
-        lineNos = true
-        lineNumbersInTable = true
-        noClasses = false # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+  [markup.highlight]
+    codeFences = true # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
 
-    [markup.goldmark]
-        [markup.goldmark.extensions]
-            definitionList = true # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
-            footnote = true
-            linkify = true
-            strikethrough = true
-            table = true
-            taskList = true
-            typographer = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
 
-        [markup.goldmark.renderer]
-            unsafe = true # 是否在文档中直接使用 HTML 标签
+    [markup.goldmark.renderer]
+      unsafe = true # 是否在文档中直接使用 HTML 标签
 
     [markup.tableOfContents]
-        startLevel = 2 # 目录设置
-        endLevel = 6
+      startLevel = 2 # 目录设置
+      endLevel = 6
 
 [sitemap]
-    changefreq = "weekly" # 网站地图配置
-    filename = "sitemap.xml"
-    priority = 0.5
+  changefreq = "weekly" # 网站地图配置
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [Permalinks]
-    posts = ":filename" # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
+  posts = ":filename" # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 
 [privacy]
-    [privacy.googleAnalytics]
-        # Google Analytics 相关隐私 (被 params.analytics.google 替代)
-    [privacy.twitter]
-        enableDNT = true
-    [privacy.youtube]
-        privacyEnhanced = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
 
 [mediaTypes]
-    [mediaTypes."text/plain"]
-        suffixes = ["md"] # 用于输出 Markdown 格式文档的设置
+  [mediaTypes."text/plain"]
+    suffixes = ["md"] # 用于输出 Markdown 格式文档的设置
 
 [outputs]
   home = ["HTML", "RSS", "Algolia"]
@@ -435,11 +395,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
 
 [languages]
   [languages.zh-tw]
+    title = "路人貓的小屋" # 網站標題
     weight = 1 # 多语言
     languageCode = "zh-TW"
     languageName = "繁體中文"
-    hasCJKLanguage = true
-    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
     [languages.zh-tw.menu]
       [[languages.zh-tw.menu.main]]
@@ -447,16 +406,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         identifier = "posts"
         pre = ""
         post = ""
-        name = "書評"
-        url = "/book/"
-        title = ""
-      
-      [[languages.zh-tw.menu.main]]
-        weight = 2
-        identifier = "blog"
-        pre = ""
-        name = "小屋"
-        url = "/blog/"
+        name = "文章"
+        url = "/Posts/"
         title = ""
       
       [[languages.zh-tw.menu.main]]
@@ -496,6 +447,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         title = "GitHub"
 
     [languages.zh-tw.params]
+      [languages.zh-tw.params.header.title]
+        logo = "" # LOGO 的 URL
+        name = "路人貓的小屋" # 标题名称
+        pre = "" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        post = "" # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        typeit = false # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
+      
       [languages.zh-tw.params.search]
         enable = true
         type = "algolia"
@@ -519,21 +477,16 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
           title = ""
-          subtitle = ""
+          subtitle = "歡迎來到路人貓的小屋"
           typeit = true
           social = true
-          disclaimer = ""
-
-      [languages.zh-tw.params.social]
-        GitHub = "passerbycat"
-        RSS = true
+          disclaimer = "喵喵"
 
   [languages.zh-cn]
+    title = "路人猫的小屋" # 網站標題
     weight = 2 # 多语言
     languageCode = "zh-CN"
     languageName = "简体中文"
-    hasCJKLanguage = true
-    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
@@ -541,16 +494,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         identifier = "book"
         pre = ""
         post = ""
-        name = "书评"
+        name = "文章"
         url = "/book/"
-        title = ""
-      
-      [[languages.zh-cn.menu.main]]
-        weight = 2
-        identifier = "blog"
-        pre = ""
-        name = "小屋"
-        url = "/blog/"
         title = ""
       
       [[languages.zh-cn.menu.main]]
@@ -590,6 +535,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         title = "GitHub"
 
     [languages.zh-cn.params]
+      [languages.zh-cn.params.header.title]
+        logo = "" # LOGO 的 URL
+        name = "路人猫的小屋" # 标题名称
+        pre = "" # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        post = "" # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        typeit = false # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
+      
       [languages.zh-cn.params.search]
         enable = true
         type = "algolia"
@@ -613,7 +565,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
           title = ""
-          subtitle = ""
+          subtitle = "欢迎来到路人猫的小屋"
           typeit = true
           social = true
-          disclaimer = ""
+          disclaimer = "喵喵"

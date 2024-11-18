@@ -133,8 +133,6 @@
                     hreflang="zh-tw"
                     href="http://localhost:1313/%E4%BF%A1%E4%BB%B0%E7%9A%84%E9%97%9C%E5%8D%A1_%E5%8A%A0%E4%BD%8E%E6%96%AF/"
                     /></url><url>
-            <loc>http://localhost:1313/blog/</loc><lastmod>2024-07-22T11:37:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/blog/</loc><lastmod>2024-07-22T11:37:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/posts/</loc><lastmod>2024-10-14T19:45:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
