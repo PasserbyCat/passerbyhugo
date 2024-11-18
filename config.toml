@@ -443,7 +443,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
         name = ""
-        url = "https://github.com/passerbycat"
+        url = "https://github.com/passerbycat/passerbyhugo"
         title = "GitHub"
 
     [languages.zh-tw.params]
@@ -531,7 +531,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
         name = ""
-        url = "https://github.com/passerbycat"
+        url = "https://github.com/passerbycat/passerbyhugo"
         title = "GitHub"
 
     [languages.zh-cn.params]
