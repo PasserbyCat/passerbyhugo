@@ -393,6 +393,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
     isPlainText = true
     isHTML = false
 
+[frontmatter]
+  lastmod = ["date", "lastmod", ":fileModTime"]
+
 [languages]
   [languages.zh-tw]
     title = "路人貓的小屋" # 網站標題
