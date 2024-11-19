@@ -1,0 +1,5 @@
+{{ with .Lastmod }}
+  <p>Last updated: {{ .Format "2006-01-02" }}</p>
+{{ else }}
+  <p>Published: {{ .Date.Format "2006-01-02" }}</p>
+{{ end }}
