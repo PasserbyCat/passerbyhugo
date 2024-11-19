@@ -412,6 +412,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"] #
         name = "文章"
         url = "/Posts/"
         title = ""
+
+      [[languages.zh-tw.menu.main]]
+        weight = 2
+        identifier = "books"
+        pre = ""
+        post = ""
+        name = "書評"
+        url = "/categories/book/"
+        title = ""
       
       [[languages.zh-tw.menu.main]]
         weight = 3
