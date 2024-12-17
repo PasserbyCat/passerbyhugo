@@ -9,7 +9,11 @@ draft: false
 
 ## 動機  
 我最一開始的動機相當簡單，就是kaggle上的獎勵，實在有點讓人心動，於是我便選擇了這個挑戰作為我的報告主題。  
-![plot01](/images/kaggle_二元毒菇預測/plot01.png)  
+
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot01.png" alt="plot01" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+
+
 
 ## 資料集分析  
 ```python
@@ -49,8 +53,10 @@ train_data.info()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot02](/images/kaggle_二元毒菇預測/plot02.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot02.png" alt="plot02" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ```python
 # 計算並顯示每個特徵（欄位）中缺失值的數量
@@ -58,8 +64,10 @@ msno.bar(train_data)
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot07](/images/kaggle_二元毒菇預測/plot07.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot07.png" alt="plot07" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ```python
 # 計算並打印目標變量（類別）的每個類別的樣本數量
@@ -76,8 +84,10 @@ plt.show()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot03](/images/kaggle_二元毒菇預測/plot03.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot03.png" alt="plot03" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ```python
 # 選擇數據集中所有類別型變量（object類型）的列
@@ -117,8 +127,10 @@ plt.show()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot04](/images/kaggle_二元毒菇預測/plot04.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot04.png" alt="plot04" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ## 資料集處理
 ```python
@@ -210,8 +222,10 @@ train_data.isna().sum()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot05](/images/kaggle_二元毒菇預測/plot05.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot05.png" alt="plot05" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ```python
 # 將特徵與目標變數分開
@@ -296,8 +310,10 @@ submission_df.to_csv('submission.csv', index=False)
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot06](/images/kaggle_二元毒菇預測/plot06.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot06.png" alt="plot06" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}
+
 
 ```python
 y_test_pred = model.predict(X_test)
@@ -309,5 +325,6 @@ plt.show()
 ```
 
 {{< admonition type=quote title="output" open=false >}}
-![plot08](/images/kaggle_二元毒菇預測/plot08.png) 
+<!-- 強制插入圖片並置中樣式 -->
+<img src="images/plot08.png" alt="plot08" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
 {{< /admonition >}}

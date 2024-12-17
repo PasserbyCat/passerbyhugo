@@ -112,9 +112,3 @@ draft: false
 亞伯拉罕的考試卷網址：https://www.tjc.org.tw/holySpiritMonthly/onlineReading/content?book=10&id=115亞伯拉罕的考試卷
 {{< /admonition >}}
 
-
-{{< admonition quote "分享紀錄" false >}}
-唱詩3/332
-{{< /admonition >}}
-
-
