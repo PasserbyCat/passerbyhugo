@@ -145,12 +145,15 @@ draft: falas
 舊約中反覆且重複的論述，顯明了神愛的耳提面命，也揭示了人心始終悖逆。就連約拿的神蹟，也只能保護尼尼微城片刻。然而所獻的一生，不看成果，只看行動。
 
 {{< admonition quote "參考圖片" false >}}
-網址 : https://biblegeography.holylight.org.tw/images/index/condensedbible/map/025.GIF
+網址 : [Bible Geography](https://biblegeography.holylight.org.tw/images/index/condensedbible/map/025.GIF)
+
+<!-- 插入圖片並強制樣式 -->
+<img src="images/map01.gif" alt="應許之地的範圍" style="display: block; margin: 0 auto; padding: 0; max-width: 100%; height: auto;">
 {{< /admonition >}}
 
 
 {{< admonition quote "參考資料" false >}}
-慈繩愛索:從何西阿書看人的真相與神的信實(上)：https://songshan.tjchurch.org.tw/?p=1942
-慈繩愛索:從何西阿書看人的真相與神的信實(下)：https://songshan.tjchurch.org.tw/?p=1964
+[慈繩愛索:從何西阿書看人的真相與神的信實(上)](https://songshan.tjchurch.org.tw/?p=1942)  
+[慈繩愛索:從何西阿書看人的真相與神的信實(下)](https://songshan.tjchurch.org.tw/?p=1964)  
 {{< /admonition >}}
 
