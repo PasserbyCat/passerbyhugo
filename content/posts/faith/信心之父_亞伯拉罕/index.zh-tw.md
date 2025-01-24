@@ -114,6 +114,6 @@ draft: false
 因為信仰是在人生的道路上一無所獲，卻在日常的生活中一無所缺。因為我們盼望的是更美的家鄉，並在信心不足中缺貨。
 
 {{< admonition quote "參考資料" false >}}
-亞伯拉罕的考試卷網址：https://www.tjc.org.tw/holySpiritMonthly/onlineReading/content?book=10&id=115亞伯拉罕的考試卷
+[亞伯拉罕的考試卷](https://www.tjc.org.tw/holySpiritMonthly/onlineReading/content?book=10&id=115%E4%BA%9E%E4%BC%AF%E6%8B%89%E7%BD%95%E7%9A%84%E8%80%83%E8%A9%A6%E5%8D%B7)
 {{< /admonition >}}
 
